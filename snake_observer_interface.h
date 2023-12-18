@@ -1,15 +1,16 @@
-#ifndef SNAKE_OBSERVER_INTERFACE
-#define SNAKE_OBSERVER_INTERFACE
+#ifndef SNAKE_OBSERVER_INTERFACE_H
+#define SNAKE_OBSERVER_INTERFACE_H
 
 namespace snake {
 
-    class Snake;
+class Snake;
 
-    class SnakeObserverInterface {
+class SnakeObserverInterface {
     public:
-        ~SnakeObserverInterface() = default;
+        virtual ~SnakeObserverInterface();
         virtual void notify(Snake& snake) = 0;
-    };
+};
+
 }
 
-#endif
+#endif // SNAKE_OBSERVER_INTERFACE_H
